@@ -1,0 +1,18 @@
+{
+  "name": "dom-with-styles",
+  "version": "0.1.0",
+  "description": "Simple way to extract the DOM of a webpage that can be contained in a single string.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel index.js -d dist"
+  },
+  "keywords": [],
+  "author": "Renaud Rwemalika <renaudrwemalika@gmail.com>",
+  "license": "Apache License, Version 2.0",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "babel-minify": "^0.5.1"
+  }
+}
