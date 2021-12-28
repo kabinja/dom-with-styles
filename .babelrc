@@ -1,4 +1,5 @@
 {
     "presets": ["minify"],
-    "comments": false
+    "comments": false,
+    "plugins": ["remove-import-export"]
   }

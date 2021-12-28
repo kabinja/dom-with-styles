@@ -1,18 +1,3 @@
-"use strict";
-
-/**
- * Get the entire dom with all the computed style as a self contained string.
- *
- * CSS stylesheet are copied in the document, and computed style are inlined in the dom.
- *
- * @param {boolean} optimize  Specifies whether or not to try to optimize import to reduce the size of the output.
- * @returns {Promise<string>}       Root element of the new clone containing all the styles.
- */
-module.exports = function domWithStyles(optimize){
-    return getCurrentDomWithStyles(optimize);
-}
-
-
 /**
  * Get the entire dom with all the computed style as a self contained string.
  *
@@ -21,7 +6,7 @@ module.exports = function domWithStyles(optimize){
  * @param {boolean} optimizeImport  Specifies whether or not to try to optimize import to reduce the size of the output.
  * @returns {Promise<string>}       Root element of the new clone containing all the styles.
  */
-const getCurrentDomWithStyles = async (optimizeImport) => {
+async function domWithStyles(optimizeImport) {
     const noStyleTags = new Set(['BASE', 'HEAD', 'HTML', 'META', 'NOFRAME', 'NOSCRIPT', 'PARAM', 'SCRIPT', 'STYLE', 'TITLE', 'LINK']);
     const ignoreTags = new Set(['SCRIPT', 'NOSCRIPT', 'STYLE', 'LINK']);
     let defaultStylesCache = new Map();
@@ -163,7 +148,7 @@ const getCurrentDomWithStyles = async (optimizeImport) => {
      * @param {Element} node             Element for which the default style needs to be computed.
      * @param {String} cssPropName       Name of the property to check
      *
-     * @return {boolean}                 True if the propery is in the inlined style, false otherwise.
+     * @return {boolean}                 True if the property is in the inlined style, false otherwise.
      */
     function isInlineStyle(node, cssPropName){
         const inlineStyle = node.getAttribute("style");
@@ -245,7 +230,7 @@ const getCurrentDomWithStyles = async (optimizeImport) => {
     /**
      * Checks if an element is an empty text node
      *
-     * Elements are considered to be empty text node if they only contain blank characters, meaning white space and charriage characters
+     * Elements are considered to be empty text node if they only contain blank characters, meaning white space and carriage characters
      *
      * @param {Node} node       Node being tested.
      *
@@ -275,11 +260,11 @@ const getCurrentDomWithStyles = async (optimizeImport) => {
     /**
      * Checks if a character is a blank character
      *
-     * A charactere is considered blank if it is either a white space or charriage characters
+     * A charactere is considered blank if it is either a white space or carriage characters
      *
      * @param {int} charCode    UTF-8 code of the character
      *
-     * @returns {boolean}       True if 'charCode' is a blank space, False otherwie.
+     * @returns {boolean}       True if 'charCode' is a blank space, False otherwise.
      */
     function isBlankCharacter(charCode) {
         return 9 === charCode || 32 === charCode || 0xB === charCode || 0xC === charCode || 10 === charCode || 13 === charCode;
@@ -515,3 +500,5 @@ const getCurrentDomWithStyles = async (optimizeImport) => {
         return dom;
     })();
 };
+
+export {domWithStyles as default};
