@@ -1,14 +1,21 @@
 {
   "name": "dom-with-styles",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Simple way to extract the DOM of a webpage that can be contained in a single string.",
-  "main": "index.js",
+  "homepage": "https://github.com/kabinja/dom-with-styles#readme",
+  "repository": "github:kabinja/dom-with-styles",
+  "browser": "src/index.js",
   "scripts": {
-    "build:browser": "babel index.js -d dist --out-file-extension .browser.js"
+    "build:dev": "babel src -d dist --copy-files",
+    "build:browser": "BABEL_ENV=browser babel src -d dist --out-file-extension .browser.js",
+    "install": "npm run build:dev && npm run build:browser"
   },
-  "keywords": [],
-  "author": "kabinja <renaudrwemalika@gmail.com>",
-  "license": "Apache License, Version 2.0",
+  "keywords": [
+    "dom",
+    "capture"
+  ],
+  "author": "Renaud Rwemalika <renaudrwemalika@gmail.com>",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",

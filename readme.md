@@ -11,7 +11,7 @@ The function clones all the DOM elements of the current document. When cloning, 
 More precisely the following actions are performed:
 - images are replaced by an empty square of the same size;
 - scripts elements are ignored;
-- link are either ignore or replaced by a style element if the are of the type stylesheet.
+- link are either ignore or replaced by a style element if the are of they type stylesheet.
 
 ## How to use it?
 
@@ -22,7 +22,7 @@ Example of usage:
 ```javascript
 
     document.addEventListener('readystatechange', event => {
-        getCurrentDomWithStyles().then(function (dom) {
+        domWithStyles(true).then(function (dom) {
             console.log(dom);
         });
     });

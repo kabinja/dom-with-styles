@@ -1,5 +1,10 @@
 {
-    "presets": ["minify"],
-    "comments": false,
-    "plugins": ["remove-import-export"]
+  "presets": ["@babel/preset-env"],
+  "env": {
+    "browser": {
+      "presets": ["@babel/preset-env", "babel-preset-minify"],
+      "comments": false,
+      "plugins": ["remove-import-export"]
+    }
   }
+}
