@@ -6,9 +6,8 @@
   "repository": "github:kabinja/dom-with-styles",
   "browser": "src/index.js",
   "scripts": {
-    "build:dev": "babel src -d dist --copy-files",
-    "build:browser": "cross-env BABEL_ENV=browser babel src -d dist --out-file-extension .browser.js",
-    "build": "npm run build:dev && npm run build:browser"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
   "keywords": [
     "dom",
@@ -18,10 +17,12 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/cli": "^7.16.0",
-    "@babel/core": "^7.16.5",
-    "@babel/preset-env": "^7.16.5",
-    "babel-minify": "^0.5.1",
-    "babel-plugin-remove-import-export": "^1.1.1",
-    "cross-env": "^7.0.3"
+    "@babel/core": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   }
 }

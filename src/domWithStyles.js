@@ -501,4 +501,4 @@ async function domWithStyles(optimizeImport) {
     })();
 };
 
-export {domWithStyles as default};
+module.exports = domWithStyles
