@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     entry: {
         domWithStyles: path.resolve(__dirname, './src/domWithStyles.js'),
+        domObserver: path.resolve(__dirname, './src/domObserver.js')
     },
     output: {
         library: '[name]',
