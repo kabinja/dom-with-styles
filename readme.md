@@ -2,7 +2,7 @@
 
 # Objective
 
-The goal of this function is to provide a simple way to extract the DOM of a webpage that can be contained in a single string. We rely on the engine of [SingleFile](https://github.com/gildas-lormeau/SingleFile) to capture the page.
+The goal of this function is to provide a simple way to extract the DOM of a webpage that can be contained in a single string. We rely on the [SingleFile](https://github.com/gildas-lormeau/SingleFile) engine to capture the page in a single page.
 
 ## How to use it?
 
