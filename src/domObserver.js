@@ -1,4 +1,4 @@
-function domObserver(){
+function trackMutation(){
     if (typeof observeDOM === undefined) {
         const observeDOM = (function () {
             window.sessionStorage.removeItem('dom_snapshot');
@@ -20,4 +20,4 @@ function domObserver(){
     }
 }
 
-module.exports = domObserver;
+export {domObserver};

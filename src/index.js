@@ -1,8 +1,13 @@
 import * as singleFile from "./single-file";
+import * as domObserver from "./domObserver";
 
 async function getContent() {
     const pageData = await singleFile.getPageData();
     return pageData.content;
 }
 
-export {getContent};
+function trackMutation() {
+    return domObserver.trackMutation();
+}
+
+export {getContent, trackMutation};
