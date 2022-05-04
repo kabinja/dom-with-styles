@@ -412,7 +412,6 @@ async function domWithStyles(optimizeImport) {
         return used;
     }
 
-
     /**
      * Computes style sheets and dom tree of the current document.
      *
