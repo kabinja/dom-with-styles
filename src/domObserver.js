@@ -20,4 +20,4 @@ function trackMutation(){
     }
 }
 
-export {domObserver};
+export {trackMutation};
