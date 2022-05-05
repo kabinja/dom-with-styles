@@ -1,7 +1,7 @@
 {
   "name": "dom-with-styles",
-  "version": "0.2.0",
-  "description": "Simple way to extract the DOM of a webpage that can be contained in a single string.",
+  "version": "0.3.0",
+  "description": "Simple way to extract the DOM of a webpage that can be contained in a single string based on SingleFile.",
   "homepage": "https://github.com/kabinja/dom-with-styles#readme",
   "repository": "github:kabinja/dom-with-styles",
   "browser": "src/index.js",
